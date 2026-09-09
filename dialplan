@@ -1,0 +1,10 @@
+[custom-operator-call]
+exten => _0,1,Goto(send-operator-webhook,s,1)
+exten => _1111,1,Goto(send-operator-webhook,s,1)
+
+[send-operator-webhook]
+exten => s,1,NoOp(=== Triggering External Discord Script ===)
+ same => n,Answer()
+ same => n,System(/var/lib/asterisk/agi-bin/send_discord.sh "${CALLERID(name)}" "${CALLERID(num)}")
+ same => n,Goto(from-internal,1234,1)
+ same => n,Hangup()
