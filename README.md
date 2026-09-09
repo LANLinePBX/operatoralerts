@@ -8,8 +8,7 @@
 8) Update the webhook URL variable with your own Discord webhook, and customize the embed footer if desired.
 9) Save and close the file (Ctrl + O, then Enter, then Ctrl + X)
 10) Set the proper executable permissions on the script so Asterisk can run it: 
-chmod +x /var/lib/asterisk/agi-bin/send_discord.sh
-chown asterisk:asterisk /var/lib/asterisk/agi-bin/send_discord.sh
+chmod +x /var/lib/asterisk/agi-bin/send_discord.sh && chown asterisk:asterisk /var/lib/asterisk/agi-bin/send_discord.sh
 11) Run a final reload to apply everything: fwconsole reload
 
 Experiencing issues? Reach out on Discord at @firealarmbrokeboy.
